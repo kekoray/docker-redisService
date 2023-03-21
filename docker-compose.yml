@@ -10,7 +10,7 @@ services:
       - TZ="Asia/Shanghai"
       - LANG="en_US.UTF-8"
     volumes:
-      - /soft/redis/datadir/:/data
-      - /soft/redis/logs/:/logs
+      - /soft/redis/data:/data
+      - /soft/redis/logs:/logs
       - /soft/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
