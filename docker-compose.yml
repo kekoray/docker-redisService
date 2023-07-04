@@ -10,7 +10,7 @@ services:
       - TZ="Asia/Shanghai"
       - LANG="en_US.UTF-8"
     volumes:
-      - /etc/localtime:/etc/localtime:ro
+      - /etc/localtime:/etc/localtime
       - ./data:/data
       - ./logs:/logs
       - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
