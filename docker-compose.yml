@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3'
 services:
   redis:
     image: redis:latest
@@ -11,7 +11,7 @@ services:
       - LANG="en_US.UTF-8"
     volumes:
       - /etc/localtime:/etc/localtime:ro
-      - /soft/redis/data:/data
-      - /soft/redis/logs:/logs
-      - /soft/redis/conf/redis.conf:/usr/local/etc/redis/redis.conf
+      - ./data:/data
+      - ./logs:/logs
+      - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
