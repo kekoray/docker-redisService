@@ -15,3 +15,13 @@ services:
       - ./logs:/logs
       - ./conf/redis.conf:/usr/local/etc/redis/redis.conf
     command: redis-server /usr/local/etc/redis/redis.conf
+    networks:
+        default:
+            ipv4_address: 192.168.5.16
+
+# docker network create --driver bridge --subnet 192.168.5.0/25 --gateway 192.168.5.1  unite_net
+
+networks:
+  default:
+    external: true
+    name: unite_net
